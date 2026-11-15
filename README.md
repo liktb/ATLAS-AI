@@ -69,9 +69,28 @@ To launch the full interactive web application featuring split-viewports, swipe 
 streamlit run app.py
 
 ```
+##  Project Structure
 
+```text
+Atlas-AI/
+│
+├── models/
+│   └── resnet18_bigearthnet_v2.pth   # Trained multi-label model weights
+├── sample_tiles/
+│   ├── ramhan_2016.png               # Sample historical validation tile
+│   └── ramhan_2026.png               # Sample modern validation tile
+├── src/
+│   ├── dataset.py                    # Optimized multi-label data loader pipeline
+│   ├── train.py                      # Mixed-precision training script
+│   ├── test.py                       # Evaluation metrics & multi-label report generator
+│   └── inference.py                  # Single-tile prediction & risk scoring script
+├── app.py                            # Streamlit geospatial command-center interface
+├── run_analysis.py                   # Standalone CLI mathematical telemetry & simulation script
+├── requirements.txt                  # Locked python package dependencies
+├── .gitignore                        # Git exclusion rules for large checkpoints
+└── README.md                         # Project documentation & metrics summary
 ---
-
+```
 ##  Authors & Team
 
 * **Pipeline Architecture, Training & Execution:** [Ryan Dinto](https://github.com/liktb)

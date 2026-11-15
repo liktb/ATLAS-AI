@@ -60,6 +60,7 @@ To execute the model locally on two sample or custom image tiles without launchi
 python run_analysis.py
 
 ```
+##OR
 
 ### 3. Launch the Streamlit Geospatial Command-Center Dashboard
 

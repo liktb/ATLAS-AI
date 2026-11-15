@@ -80,11 +80,3 @@ streamlit run app.py
 ```
 
 ---
-
-##  Authors & Team
-
-* **Pipeline Architecture, Training & Execution:** [Ryan Dinto](https://github.com/liktb)
-* **Dataset Curation & Data Splitting Lead:** [Aaryan Kalra](https://github.com/aaryankalra1510-lgtm)
-* **Application Integration & Streamlit Demo Interface Lead:** [Devansh Sharma](https://github.com/devanshs1802-glitch)
-
-```

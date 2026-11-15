@@ -30,11 +30,12 @@ Evaluated on held-out benchmark splits:
 - **Macro Mean Average Precision (mAP):** `66.53%`
 - **Micro F1-Score:** `72.65%`
 - **Hamming Loss (Error Rate):** `7.90%`
-- **Where it fails:** High-frequency coastal sun glint and shallow water reflections can occasionally skew surface water probability bounds, requiring strict radiometric edge-texture gating to prevent minor misclassifications.
+- **Where it fails:** High-frequency coastal sun glint and shallow water reflections can occasionally skew surface water probability bounds, requiring strict radiometric edge-texture gating to prevent minor misclassifications. The AI model also tends to occasionally mark green lands as water sources under unfavourably lighting, and cloudy zones.
 
 ##  What We'd Do Next
 1. Integrate live Copernicus/Planet API streaming to query live satellite tiles dynamically for any global GPS coordinate.
 2. Expand the validation set across multiple international coastal reclamation zones to further refine arid-zone edge weights.
+3. Enhance the accuracy and reduce false positive marine flags on the test tiles.
 
 ##  Sources & Acknowledgments
 * **Satellite Imagery:** Planet Insights ([https://insights.planet.com/](https://insights.planet.com/))

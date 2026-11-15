@@ -40,7 +40,7 @@ Evaluated on held-out benchmark splits:
 * **Satellite Imagery:** Planet Insights ([https://insights.planet.com/](https://insights.planet.com/))
 * **Dataset & Architecture:** BigEarthNet v2.0 (reBEN) multi-label benchmark dataset; PyTorch & Torchvision ResNet-18.
 * **Libraries:** Streamlit, Plotly, Pandas, NumPy, and `streamlit-image-comparison`.
-* **AI Development Assistance:** Built with coding and architecture support from **Qwencoder3.5 (9B)** and **Gemini**.
+* **AI Development Assistance:** Built with coding and architecture support from **Qwencoder3.5 (9B) LLM** and **Gemini**.
   
 ##  How to Run Locally
 

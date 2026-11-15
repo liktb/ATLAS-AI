@@ -6,7 +6,7 @@
 
 ---
 
-> **Disclaimer:** *This project is a prototype for geospatial environmental monitoring and is not official municipal planning or regulatory advice[cite: 31].*
+> **Disclaimer:** *This project is a prototype for geospatial environmental monitoring and is not official municipal planning or regulatory advice.*
 
 ---
 

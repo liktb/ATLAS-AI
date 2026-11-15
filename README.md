@@ -38,7 +38,7 @@ Evaluated on held-out benchmark splits:
 3. Enhance the accuracy and reduce false positive marine flags on the test tiles.
 
 ##  Sources & Acknowledgments
-* **Satellite Imagery:** Planet Insights [Satlite](https://insights.planet.com/))
+* **Satellite Imagery:** Planet Insights ([Satlite](https://insights.planet.com/))
 * **Dataset & Architecture:** BigEarthNet v2.0 (reBEN) multi-label benchmark dataset; PyTorch & Torchvision ResNet-18.
 * **Libraries:** Streamlit, Plotly, Pandas, NumPy, and `streamlit-image-comparison`.
 * **AI Development Assistance:** Built with coding and architecture support from **Qwencoder3.5 (9B) LLM** and **Gemini**.

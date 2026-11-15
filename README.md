@@ -21,7 +21,7 @@ While standard models output independent multi-label probabilities that do not f
 
 ##  How It Works
 * **Data (Lead: Aaryan Kalra):** Sourced and structured high-resolution satellite imagery tiles from **Planet Insights** (`https://insights.planet.com/`), anchored by regional validation case studies on Ramhan Island, Abu Dhabi (comparing 2016 baseline sabkha against 2026 urban waterfront megaprojects).
-* **Model & Backend (Lead: Ryan Dinto):** Fine-tuned a ResNet-18 architecture initialized with ImageNet weights, modified for 19 multi-label classes on the BigEarthNet v2.0 (reBEN) dataset, and accelerated locally via NVIDIA CUDA with automated CPU fallback. Evaluated to achieve an **83.28% micro mAP**.
+* **Model & Backend (Lead: Ryan Dinto):** Fine-tuned a ResNet-18 architecture initialized with ImageNet weights, modified for 19 multi-label classes on the BigEarthNet v2.0 (reBEN) dataset, and accelerated locally via NVIDIA CUDA utilizing an RTX Ada Lovelace 4070M GPU with automated CPU fallback. Evaluated to achieve an **83.28% micro mAP**.
 * **Interface & App Integration (Lead: Devansh Sharma):** Built a dark-themed geospatial command center in Streamlit (`app.py`) featuring interactive swipe-comparison viewports (`streamlit-image-comparison`), macro telemetry progress bars, and probability distribution shift charts via Plotly.
 
 ##  Results & Evaluation Metrics

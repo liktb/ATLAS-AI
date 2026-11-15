@@ -1,7 +1,7 @@
 # ATLAS: Automated Tracking of Land, Agriculture & Sprawl: [Web Application](https://atlasai-109.streamlit.app/)
 
-**Track:** AI + Climate[cite: 33]  
-**Team Name:** Team ATLAS-AI  
+**Track:** AI + Climate 
+**Team Name:** ATLAS-AI  
 **Team Members:** Ryan Dinto, Aaryan Kalra, Devansh Sharma  
 
 ---

@@ -1,57 +1,49 @@
 
 ## ATLAS: Automated Tracking of Land, Agriculture & Sprawl: [link](https://atlasai-109.streamlit.app/)
-### 1. README.md
-
-```markdown
 # ATLAS: Automated Tracking of Land, Agriculture & Sprawl
 
-A production-grade geospatial AI monitoring pipeline built using PyTorch, Torchvision (**ResNet-18**), and accelerated locally via NVIDIA CUDA (with automated CPU fallback). Designed for high-accuracy land-use multi-label classification, temporal change detection, and predictive urban sprawl/water scarcity risk modeling on satellite imagery.
+**Track:** AI + Climate[cite: 33]  
+**Team Name:** Team ATLAS-AI  
+**Team Members:** Ryan Dinto, Aaryan Kalra, Devansh Sharma  
 
 ---
 
-##  Model Performance & Evaluation Metrics
+> **Disclaimer:** *This project is a prototype for geospatial environmental monitoring and is not official municipal planning or regulatory advice[cite: 31].*
 
-Evaluated on the BigEarthNet v2.0 (reBEN) held-out test dataset:
-- **Macro Mean Average Precision (mAP):** `66.53%`
+---
+
+##  The Problem
+Rapid urban expansion and coastal land reclamation (such as artificial island megaprojects in Abu Dhabi like Ramhan Island) drastically alter fragile local ecosystems, leading to the loss of natural sabkha, coastal wetlands, and unmanaged environmental risk. Urban planners and environmental researchers require rapid, quantitative tools to measure historical land-cover changes and reliably project future environmental degradation.
+
+##  What We Built
+ATLAS is a multi-modal geospatial AI platform available as both a Streamlit web command-center interface (`app.py`) and a standalone CLI analytical engine (`run_analysis.py`). It takes historical and modern Sentinel-2 satellite imagery tiles sourced from Planet Insights, computes compositional land-cover distributions using a fine-tuned ResNet-18 neural network, and runs scientific logistic-growth mathematical models to project future urban sprawl velocity and water scarcity risk indices.
+
+##  What We Added
+While standard models output independent multi-label probabilities that do not form a coherent whole, we built a **Compositional 100% Softmax Normalization Engine** so that all land-cover classes sum strictly to 100% of the image area. Furthermore, we implemented **Arid-Zone Radiometric Domain Adaptation** to prevent false European forest classifications over Middle Eastern deserts, alongside a **Predictive Simulation Engine** modeling temporal expansion velocity.
+
+##  How It Works
+* **Data (Lead: Aaryan Kalra):** Sourced and structured high-resolution satellite imagery tiles from **Planet Insights** (`https://insights.planet.com/`), anchored by regional validation case studies on Ramhan Island, Abu Dhabi (comparing 2016 baseline sabkha against 2026 urban waterfront megaprojects).
+* **Model & Backend (Lead: Ryan Dinto):** Fine-tuned a ResNet-18 architecture initialized with ImageNet weights, modified for 19 multi-label classes on the BigEarthNet v2.0 (reBEN) dataset, and accelerated locally via NVIDIA CUDA with automated CPU fallback. Evaluated to achieve an **83.28% micro mAP**.
+* **Interface & App Integration (Lead: Devansh Sharma):** Built a dark-themed geospatial command center in Streamlit (`app.py`) featuring interactive swipe-comparison viewports (`streamlit-image-comparison`), macro telemetry progress bars, and probability distribution shift charts via Plotly.
+
+##  Results & Evaluation Metrics
+Evaluated on held-out benchmark splits:
 - **Micro Mean Average Precision (mAP):** `83.28%`
-- **Macro F1-Score:** `59.33%`
+- **Macro Mean Average Precision (mAP):** `66.53%`
 - **Micro F1-Score:** `72.65%`
 - **Hamming Loss (Error Rate):** `7.90%`
+- **Where it fails:** High-frequency coastal sun glint and shallow water reflections can occasionally skew surface water probability bounds, requiring strict radiometric edge-texture gating to prevent minor misclassifications.
 
----
+##  What We'd Do Next
+1. Integrate live Copernicus/Planet API streaming to query live satellite tiles dynamically for any global GPS coordinate.
+2. Expand the validation set across multiple international coastal reclamation zones to further refine arid-zone edge weights.
 
-##  Regional Case Study & Sample Validation
-The repository includes un-trained sample historical and modern satellite tiles located in the `sample_tiles/` directory (e.g., Ramhan Island, Abu Dhabi) to test temporal inference immediately:
-- **Baseline Tile (`ramhan_2016.png`):** Captures natural coastal sabkha and early earth-moving operations.
-- **Target Tile (`ramhan_2026.png`):** Captures the completed luxury waterfront canal and residential megaproject.
-
----
-
-##  Project Structure
-
-```text
-Atlas-AI/
-│
-├── models/
-│   └── resnet18_bigearthnet_v2.pth   # Trained multi-label model weights
-├── sample_tiles/
-│   ├── ramhan_2016.png               # Sample historical validation tile
-│   └── ramhan_2026.png               # Sample modern validation tile
-├── src/
-│   ├── dataset.py                    # Optimized multi-label data loader pipeline
-│   ├── train.py                      # Mixed-precision training script
-│   ├── test.py                       # Evaluation metrics & multi-label report generator
-│   └── inference.py                  # Single-tile prediction & risk scoring script
-├── app.py                            # Streamlit geospatial command-center interface
-├── run_analysis.py                   # Standalone CLI mathematical telemetry & simulation script
-├── requirements.txt                  # Locked python package dependencies
-├── .gitignore                        # Git exclusion rules for large checkpoints
-└── README.md                         # Project documentation & metrics summary
-
-```
-
----
-
+##  Sources & Acknowledgments
+* **Satellite Imagery:** Planet Insights ([https://insights.planet.com/](https://insights.planet.com/))
+* **Dataset & Architecture:** BigEarthNet v2.0 (reBEN) multi-label benchmark dataset; PyTorch & Torchvision ResNet-18.
+* **Libraries:** Streamlit, Plotly, Pandas, NumPy, and `streamlit-image-comparison`.
+* **AI Development Assistance:** Built with coding and architecture support from **Qwencoder3.5 (9B)** and **Gemini**.
+  
 ##  How to Run Locally
 
 ### 1. Install Dependencies

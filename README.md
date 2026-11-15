@@ -38,7 +38,7 @@ Evaluated on held-out benchmark splits:
 3. Enhance the accuracy and reduce false positive marine flags on the test tiles.
 
 ##  Sources & Acknowledgments
-* **Satellite Imagery:** Planet Insights ([https://insights.planet.com/](https://insights.planet.com/))
+* **Satellite Imagery:** Planet Insights [Satlite](https://insights.planet.com/))
 * **Dataset & Architecture:** BigEarthNet v2.0 (reBEN) multi-label benchmark dataset; PyTorch & Torchvision ResNet-18.
 * **Libraries:** Streamlit, Plotly, Pandas, NumPy, and `streamlit-image-comparison`.
 * **AI Development Assistance:** Built with coding and architecture support from **Qwencoder3.5 (9B) LLM** and **Gemini**.
@@ -69,6 +69,10 @@ To launch the full interactive web application featuring split-viewports, swipe 
 streamlit run app.py
 
 ```
+### 4. Use the given test tiles in Atlas-AI/sample_tiles/untrained_satlite_tiles/
+
+To launch the full interactive web application featuring split-viewports, swipe sliders, and predictive simulation curves:
+
 ##  Project Structure
 
 ```text
@@ -78,7 +82,8 @@ Atlas-AI/
 │   └── resnet18_bigearthnet_v2.pth   # Trained multi-label model weights
 ├── sample_tiles/
 │   ├── ramhan_2016.png               # Sample historical validation tile
-│   └── ramhan_2026.png               # Sample modern validation tile
+│   ├── ramhan_2026.png               # Sample modern validation tile
+│   └── untrained_satlite_tiles/      # Untested Tiles straight from Planet Insights 
 ├── src/
 │   ├── dataset.py                    # Optimized multi-label data loader pipeline
 │   ├── train.py                      # Mixed-precision training script

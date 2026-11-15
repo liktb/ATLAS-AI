@@ -54,7 +54,7 @@ Evaluated on held-out benchmark splits:
   
 4. **AI Assistants & Coding Tools:**
 * Qwencoder3.5 (9B) – Used for code architecture structuring and logic optimization.
-* Google Gemini – Used for personal AI collaboration, technical documentation drafting, and project planning. 
+* Google Gemini – Used for AI collaboration and technical documentation drafting. 
 
 ##  How to Run Locally
 

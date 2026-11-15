@@ -53,7 +53,7 @@ Evaluated on held-out benchmark splits:
 * `streamlit-image-comparison`
   
 4. **AI Assistants & Coding Tools:**
-* Qwencoder3.5 (9B) – Used for code architecture structuring and logic optimization.
+* Qwencoder3.5 (9B) LLM – Used for code architecture structuring and logic optimization.
 * Google Gemini – Used for AI collaboration and technical documentation drafting. 
 
 ##  How to Run Locally

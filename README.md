@@ -38,11 +38,24 @@ Evaluated on held-out benchmark splits:
 3. Enhance the accuracy and reduce false positive marine flags on the test tiles.
 
 ##  Sources & Acknowledgments
-* **Satellite Imagery:** Planet Insights ([Satlite](https://insights.planet.com/))
-* **Dataset & Architecture:** BigEarthNet v2.0 (reBEN) multi-label benchmark dataset; PyTorch & Torchvision ResNet-18.
-* **Libraries:** Streamlit, Plotly, Pandas, NumPy, and `streamlit-image-comparison`.
-* **AI Development Assistance:** Built with coding and architecture support from **Qwencoder3.5 (9B) LLM** and **Gemini**.
+
+1. **Satellite Imagery Source:**
+* Planet Insights ([Satlite_imgs](https://insights.planet.com/))
   
+2. **Datasets & Model Backbones:**
+* BigEarthNet v2.0 (reBEN) multi-label benchmark dataset
+* PyTorch & Torchvision ResNet-18 architecture
+  
+3. **Open-Source Libraries & UI Tools:**
+* Streamlit
+* Plotly
+* Pandas & NumPy
+* `streamlit-image-comparison`
+  
+4. **AI Assistants & Coding Tools:**
+* Qwencoder3.5 (9B) – Used for code architecture structuring and logic optimization.
+* Google Gemini – Used for personal AI collaboration, technical documentation drafting, and project planning. 
+
 ##  How to Run Locally
 
 ### 1. Install Dependencies
